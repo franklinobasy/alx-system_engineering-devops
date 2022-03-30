@@ -1,2 +1,5 @@
 #!/bin/bash
+cd /tmp/
+mkdir var
+cd /var
 cd ..
