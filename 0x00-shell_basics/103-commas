@@ -1,2 +1,2 @@
 #!/bin/bash
-ls --indicator-style=comma
+ls -m
