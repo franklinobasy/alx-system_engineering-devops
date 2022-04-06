@@ -1,2 +1,2 @@
 #!/bin/bash
-sed | printenv | alias
+set | printenv | alias
