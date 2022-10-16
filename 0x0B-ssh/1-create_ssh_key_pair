@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!#!/usr/bin/env bash
 
 # Write a Bash script that creates an RSA key pair.
 # Number of bits = 4096
