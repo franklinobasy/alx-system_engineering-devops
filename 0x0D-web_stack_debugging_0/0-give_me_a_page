@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # FIX - start apache service
 
- docker exec container_name service apache2 start
+docker exec container_name service apache2 start
