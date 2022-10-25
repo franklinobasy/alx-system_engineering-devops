@@ -6,6 +6,6 @@ sudo apt-get -y install nginx
 
 sudo sed -i "12i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
 echo "Hello World!" | sudo tee /var/www/html/index.html
-echo "Ceci n'est pas une page" > /var/www/html/404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 
 sudo service nginx start
