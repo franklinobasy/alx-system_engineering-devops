@@ -12,4 +12,4 @@ sudo sed -i 'aENABLED=1\n' /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
 sudo sed -i "a\nfrontend 33743-lb-01\n\tbind *:80\n\tmode http\n\tdefault_backend web-backend\nbackend web-backend\n\tbalance roundrobin\n\toption forwardfor\n\tserver 33743-web-01 3.95.133.255:80 check\n\tserver 33743-web-02 54.87.207.29:80 check\n" /etc/haproxy/haproxy.cfg
 
-sudo systemctl restart haproxy
+sudo service haproxy restart
