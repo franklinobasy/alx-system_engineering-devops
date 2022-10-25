@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Configure Nginx so that its HTTP response contains a custom header
 
-sudo apt-get update
-sudo apt-get install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 
-sudo sed -i "12i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+sed -i "47i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
 echo "Hello World!" | sudo tee /var/www/html/index.html
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 
