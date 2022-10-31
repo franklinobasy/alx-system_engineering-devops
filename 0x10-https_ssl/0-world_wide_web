@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# shows information about subdomain 
+
+domain_info() {
+    # funtion that show information about a particular subdomain
+
+    domain="$1"
+    subdomain="$2"
+    hostname="$subdomain.$domain"
+    record=$(dig "$hostname" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $4}')
+    ip=$(dig "$hostname" | grep -A1 'ANSWER SECTION:' | tail -1 | awk '{print $5}')
+
+    echo "The subdomain $subdomain is a $record record and points to $ip"
+}
+
+if [ $# -eq 1 ]; then
+    subdomains=( "www" "lb-01" "web-01" "web-02" )
+    for sub in "${subdomains[@]}"; do
+        domain_info "$1" "$sub"
+    done
+
+elif [ $# -eq 2 ]; then
+    domain_info "$1" "$2"
+
+fi
