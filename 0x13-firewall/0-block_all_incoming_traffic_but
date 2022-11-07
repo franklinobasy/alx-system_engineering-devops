@@ -1,0 +1,30 @@
+# install ufw
+sudo apt install ufw
+
+# UFW can work managing both IPV4 addresses, enabled by default, and IPV6 if necessary. If you need to also # enable IPV6, modify this option from the file "/ etc / default / ufw". 
+
+# In order to apply this change, open the file with the nano editor:
+# Then make sure the value of IPV6 is yes. It should look like this:
+# IPV6=yes
+sudo nano /etc/default/ufw
+
+# To block any form of communication TOWARDS the server
+sudo ufw default deny incoming
+
+# To allow any form of outgoing communication FROM the server
+sudo ufw default allow outgoing
+
+# To configure your server to allow incoming SSH connections, you can use this command:
+sudo ufw allow ssh
+# or sudo ufw allow 22
+
+# To configure your server to allow incoming HTTP connections, you can use this command:
+sudo ufw allow 80
+# sudo ufw allow http
+
+# To configure your server to allow incoming HTTPS connections, you can use this command:
+sudo ufw allow 443
+# sudo ufw allow https
+
+# Enable UFW
+sudo ufw enable
