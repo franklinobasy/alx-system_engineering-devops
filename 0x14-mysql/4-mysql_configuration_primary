@@ -41,6 +41,3 @@ binlog_do_db    = tyrell_corp
 # bind-address  = 127.0.0.1
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0
-
-!includedir /etc/mysql/conf.d/
-!includedir /etc/mysql/mysql.conf.d/
