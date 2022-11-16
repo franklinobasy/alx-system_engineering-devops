@@ -46,5 +46,5 @@ if (__name__ == "__main__") and (len(sys.argv) > 1):
             text2 = f"with tasks({n_tasks_completed}/{n_todos}):"
             print(text1 + text2)
             for title in tasks_completed_title:
-                print(f"\t{title}")
+                print(f"\t {title}")
             break
