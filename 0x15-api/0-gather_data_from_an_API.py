@@ -25,8 +25,9 @@ import sys
 
 if (__name__ == "__main__") and (len(sys.argv) > 1):
     id = int(sys.argv[1])
-    users = requests.get("https://jsonplaceholder.typicode.com/users").json()
-    todos = requests.get("https://jsonplaceholder.typicode.com/todos").json()
+    url = "https://jsonplaceholder.typicode.com"
+    users = requests.get(f"{url}/users").json()
+    todos = requests.get(f"{url}/todos").json()
 
     n_todos = 0
     n_tasks_completed = 0
