@@ -24,7 +24,7 @@ to use a recursive function. :)
 import requests
 
 
-def recurse(subreddit: str, hot_list = []) -> list[str]:
+def recurse(subreddit: str, hot_list=[]) -> list[str]:
     '''
     returns a list containing the titles of all hot articles for
     a given subreddit. If no results are found for the given subreddit,
